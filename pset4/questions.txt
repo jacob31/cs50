@@ -1,0 +1,105 @@
+// file name: questions.txt
+// author: Ben Silbernagel
+// created: winter 2015-2016
+// class: Introduction to Computer Science, by Harvard University
+// purpose: pset4: answers to questions
+
+0.  How many different colors does each format support?
+
+    BMP= 4,294,967,296 colors, GIF= 256 colors, JPEG= 16,777,216 colors, and 
+    PNG= 16,777,216 colors 
+
+1.  Which of the formats supports animation?
+    
+    GIF
+
+2.  What’s the difference between lossy and lossless compression?
+
+    lossless is a compressed copy of the file where the lossy is a rendition of 
+    the original.
+
+3.  Which of these formats is lossy-compressed?
+    
+    jpeg
+
+4.  What happens, technically speaking, when a file is deleted on a FAT file 
+    system?
+
+    When a file is deleted the system rewrites the meta data, so the section of 
+    memory goes into the location where the free space is without actually 
+    doing anything to the file itself.
+
+5.  What can someone like you do to ensure (with high probability) that files 
+    you delete cannot be recovered?
+
+    You can over write the data using a software that uses a random pattern to 
+    over write the sectors of memory. The best way though is to destroy the 
+    drive physically.
+
+6.  What’s stdint.h?
+
+    STDINT.H is a library for all types of integers that are arranged in 
+    different bit sizes to help the computer format the data correctly.
+
+7.  What’s the point of using uint8_t, uint32_t, int32_t, and uint16_t in a 
+    program?
+
+    It set the parameters for the data being place into memory.  Example uint8_t
+    describes an unasigned integer that has 8 bits that would contain values 
+    ranging from 0-255.
+
+8.  How many bytes is a BYTE, a DWORD, a LONG, and a WORD, respectively?
+    
+    BYTE= 1 byte, DWORD= 4 bytes, LONG=4 bytes, and WORD= 2 bytes
+
+9.  What (in ASCII, decimal, or hexadecimal) must the first two bytes of any 
+    BMP file be? (Leading bytes used to identify file formats (with high 
+    probability) are generally called "magic numbers.)"
+
+    0x4d42
+
+10. What’s the difference between bfSize and biSize?
+    
+    bfSize is the size of the file in bytes, where bisize is the image size in 
+    bytes.
+
+11. What does it mean if biHeight is negative?
+    
+    biHeight specifies the height of the bitmap. + & - heights just give you
+    an idea where this measurement starts at.  + starts in the bottom left 
+    corner.  Where a "-" biHeight starts top left corner.
+
+
+
+12. What field in BITMAPINFOHEADER specifies the BMP’s color depth (i.e., bits 
+    per pixel)?
+
+    biBitCount
+
+13. Why might fopen return NULL in copy.c:37?
+
+    the output file was not able to be created.  Like if the user doesn't have
+    access to where the program is creating the file.
+
+14. Why is the third argument to fread always 1 in our code?
+
+    The 3rd arguement points to the number of elements to be read at that time.
+    It has to do with the desire of creating an exact copy.
+
+15. What value does copy.c:70 assign padding if bi.biWidth is 3?
+
+    0
+
+16. What does fseek do?
+
+    fseek searchs the input stream crom the current location and it uses the 
+    padding as an offset, so that the search will start after it has pasted over
+    the padding.
+
+17. What is SEEK_CUR?
+
+    SEEK_CUR is the current location of the file pointer.
+
+18. Whodunit?
+    
+    Colton Ogden or we just got Rick rolled!
